@@ -20,7 +20,7 @@ gallery.insertAdjacentHTML(
   images
     .map(
       (image) =>
-        `<li><img src="${image.url}" alt="${image.alt}" width="100%"></li>`
+        `<li><img src="${image.url}" alt="${image.alt}" width="50%"></li>`
     )
     .join("")
 );
