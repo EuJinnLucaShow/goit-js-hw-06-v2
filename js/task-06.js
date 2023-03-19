@@ -1,10 +1,13 @@
 const inputValid = document.getElementById("validation-input");
 
 inputValid.addEventListener("blur", () => {
-  if (inputValid.value === inputValid.getAttribute("data-length")) {
+  const dataLength = inputValid.getAttribute("data-length");
+  const inputLength = inputValid.value.length;
+
+  if (inputLength === Number(dataLength)) {
     inputValid.classList.add("valid");
     inputValid.classList.remove("invalid");
-  } else if (inputValid.value === "") {
+  } else if (inputLength === 0) {
     inputValid.classList.remove("valid");
     inputValid.classList.remove("invalid");
   } else {
